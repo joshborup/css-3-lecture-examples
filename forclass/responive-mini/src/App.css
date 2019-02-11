@@ -1,0 +1,70 @@
+header {
+	height: 90px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	background: tomato;
+}
+
+header > div {
+	/* content */
+	max-width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 20px;
+	width: 100%;
+
+	/* display */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	/* decor */
+}
+
+header div ul {
+	background-color: tomato;
+	display: flex;
+}
+
+header li {
+	margin: 0 10px;
+}
+header a {
+	color: white;
+	text-decoration: none;
+}
+
+header button {
+	display: none;
+}
+@media (max-width: 700px) {
+	header ul {
+		position: fixed;
+		top: 90px;
+		left: 0;
+		height: 0px;
+		flex-direction: column;
+		width: 100vw;
+		transition: 0.3s;
+		overflow: hidden;
+	}
+	header li {
+		margin: 10px 0;
+	}
+
+	header button {
+		display: flex;
+	}
+
+	.show {
+		height: 200px;
+		transform: translate(0, 0);
+	}
+
+	.hide {
+		transform: translate(0, -400px);
+	}
+}

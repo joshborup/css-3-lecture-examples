@@ -1,0 +1,143 @@
+header {
+    height: 90px;
+    width: 100%;
+    color: white;
+    background: linear-gradient(90deg, rgb(236, 26, 26), rgb(247, 225, 35));
+}
+
+header > div {
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav > ul {
+    min-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+header div > button{
+    display: none;
+}
+
+/* banner for if you have time */
+
+.banner-container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0px auto;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner-container h1 {
+    font-size: 4.5vw;
+    margin: 10px 0;
+    color:  #444444;
+}
+
+.banner-container h2 {
+    font-size: 3.5vw;
+    color:  #444444;
+}
+
+.banner-container button {
+    padding: 20px;
+    font-size: 18px;
+    background: white;
+    border: none;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.431);
+    cursor: pointer;
+}
+
+.banner-container button:focus {
+    outline: none;
+}
+
+@media screen and (max-width: 700px){
+    header > div button{
+        display: initial;
+        position: fixed;
+        z-index: 5;
+        height: 60px;
+        font-size: 24px;
+        border-radius: 50%;
+        width: 60px;
+        bottom: 30px;
+        right: 30px;
+        cursor: pointer;
+        box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.397);
+    }
+
+    header > div button:focus{
+        outline: none;
+    }
+
+    header > div {
+        background: linear-gradient(rgb(245, 75, 75), rgb(255, 78, 47));
+    }
+
+    header nav {
+        position: fixed;
+        right: 0;
+        width: 100%;
+        background: grey;
+        bottom: 0;
+        z-index: 3;
+        transition: .3s;
+        transition-timing-function: ease-in-out;
+        transform: translate(0px, 300px);
+    }
+
+    header nav > ul {
+        display: flex;
+        min-width: 100vw;
+        justify-content: space-between;
+        height: 300px;
+        padding: 40px 0;
+        flex-direction: column;
+        align-items: center;
+        font-size: 22px;
+    }
+
+    header .show {
+        transform: translate(0px, 0px);
+        
+    }
+
+    header .faded-background {
+        display: initial;
+        height: 100vh;
+        width: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.363);
+    }
+
+    .banner-container h1 {
+        font-size: 7.5vw;
+    }
+    
+    .banner-container h2 {
+        font-size: 5.5vw;
+    }
+
+}

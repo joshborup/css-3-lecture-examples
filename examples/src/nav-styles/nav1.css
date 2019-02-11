@@ -1,0 +1,154 @@
+header {
+	height: 90px;
+	width: 100%;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	color: white;
+
+	background: linear-gradient(90deg, purple, greenyellow, red, blue);
+}
+
+header > div {
+	height: 100%;
+	width: 100%;
+	max-width: 1000px;
+	padding: 0 20px;
+	margin: 0 auto;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header nav ul {
+	min-width: 400px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header a {
+	color: white;
+	text-decoration: none;
+	font-size: 22px;
+}
+
+header div button {
+	display: none;
+}
+
+header .faded-background {
+	display: none;
+}
+
+.banner-container {
+	height: 500px;
+	max-width: 1100px;
+	width: 100%;
+	margin: 0px auto;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.banner-container h1 {
+	font-size: 4.5vw;
+	margin: 10px 0;
+	color: #444444;
+}
+
+.banner-container h2 {
+	font-size: 3.5vw;
+	color: #444444;
+}
+
+.banner-container button {
+	padding: 20px;
+	font-size: 18px;
+	background: white;
+	border: none;
+	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.431);
+	cursor: pointer;
+}
+
+.banner-container button:focus {
+	outline: none;
+}
+
+@media screen and (max-width: 700px) {
+	header > div button {
+		display: initial;
+		position: absolute;
+		background: #f3adad;
+		cursor: pointer;
+		border: none;
+		z-index: 5;
+		border-radius: 4px;
+		font-size: 20px;
+		height: 50px;
+		width: 50px;
+		top: 20px;
+		right: 20px;
+		text-shadow: 1px 1px 2px rgb(0, 0, 0);
+		box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+	}
+
+	header > div button:focus {
+		outline: none;
+	}
+
+	header > div {
+		background: linear-gradient(rgb(255, 100, 100), rgb(255, 54, 47));
+	}
+
+	header nav {
+		position: fixed;
+		right: 0;
+		z-index: 2;
+		min-height: 100vh;
+		background: rgb(56, 56, 56);
+		top: 0;
+		bottom: 0;
+		transition: 0.3s;
+		transition-timing-function: ease-in-out;
+		transform: translate(300px, 0px);
+	}
+
+	header nav > ul {
+		display: flex;
+		min-width: 300px;
+		padding-top: 90px;
+		justify-content: space-between;
+		height: 300px;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	header .show {
+		transform: translate(0px, 0px);
+	}
+
+	header .faded-background {
+		display: initial;
+		height: 100vh;
+		width: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background: rgba(0, 0, 0, 0.363);
+	}
+
+	.banner-container h1 {
+		font-size: 7.5vw;
+	}
+
+	.banner-container h2 {
+		font-size: 5.5vw;
+	}
+}
